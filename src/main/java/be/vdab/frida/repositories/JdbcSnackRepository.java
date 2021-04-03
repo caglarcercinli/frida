@@ -41,7 +41,7 @@ public class JdbcSnackRepository implements SnackRepository{
 
     @Override
     public List<Snack> findByBeginNaam(String beginNaam) {
-        var sql="select id, naam and prijs from snacks where naam like ? order by naam";
+        var sql="select id, naam, prijs from snacks where naam like ? order by naam";
         return template.query(sql,snackRowMapper,beginNaam+'%');
     }
 }
