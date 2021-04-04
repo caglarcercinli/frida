@@ -11,7 +11,7 @@
 </ul>
 <th:block th:if="${letter}">
     <h2>Snacks beginnen met</h2> <th:block th:text="${letter}"></th:block>
-    <ul><li th:each="snack:${snacks}" th:text="${snack.naam}"></li></ul>
+    <ul><li th:each="snack:${snacks}"><a th:href="@{/snacks/{id}/wijzigen/form(id=${snack.id})}" th:text="${snack.naam}"></a></li></ul>
 </th:block>
 
 </body>

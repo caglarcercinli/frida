@@ -5,6 +5,7 @@
 </head>
 <body>
     <nav th:replace="fragments::menu"></nav>
+    <div th:if="${param.snackNietGevonden}" class="fout">Snack <th:block th:text="${param.snackNietGevonden}"></th:block> niet gevonden</div>
     <div>Je bezoekt ons voor de <th:block th:text="${aantalBezoeken}"></th:block>° keer.</div>
     <h1>Frituur Frida</h1>
 
